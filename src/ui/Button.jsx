@@ -57,7 +57,7 @@ const Button = styled.button`
   ${(props) => variations[props.variation]}
 `;
 
-//Define the default style for <Button> elements when there are no props passed in
+//Define the default style for <Button> elements when there are no props passed in.
 Button.defaultProps = {
   variation: "primary",
   size: "medium",
