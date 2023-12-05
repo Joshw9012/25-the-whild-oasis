@@ -33,7 +33,10 @@ function CabinTable() {
     isLoading,
     data: cabins,
     error,
-  } = useQuery({ queryKey: ["cabin"], queryFn: getCabins });
+  } = useQuery({
+    queryKey: ["cabins"], //data to query , will save the fetched data in cache - will see in the dev tool
+    queryFn: getCabins, // must be a function for query data from API, will return a  promise;
+  });
 
   if (isLoading) return <Spinner />;
 
