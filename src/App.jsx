@@ -17,7 +17,7 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       queries: {
-        staleTime: 60 * 1000, //amount of of time the data will state in the cache untill it re-fetch.
+        staleTime: 0, //amount of of time the data will state in the cache untill it re-fetch.
       },
     },
   },
