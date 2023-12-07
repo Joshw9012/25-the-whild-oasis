@@ -38,8 +38,6 @@ function CabinTable() {
     queryFn: getCabins, // must be a function for query data from API, will return a  promise;
   });
 
-  console.log(isLoading);
-
   if (isLoading) return <Spinner />;
 
   return (
