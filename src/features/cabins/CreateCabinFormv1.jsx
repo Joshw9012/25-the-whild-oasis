@@ -14,7 +14,6 @@ import FormRow from "../../ui/FormRow";
 function CreateCabinForm() {
   const { register, handleSubmit, reset, getValues, formState } = useForm();
   const { errors } = formState;
-  //console.log(errors);
 
   const queryClient = useQueryClient();
   const { mutate, isLoading: isCreating } = useMutation({
@@ -32,12 +31,9 @@ function CreateCabinForm() {
 
   function onSubmit(data) {
     mutate({ ...data, image: data.image[0] });
-    // console.log(data);
   }
 
-  function onError(errors) {
-    //console.log(errors);
-  }
+  function onError(errors) {}
 
   return (
     //if not pass the validation, the Form will excute the secion function; in this case, - onError function

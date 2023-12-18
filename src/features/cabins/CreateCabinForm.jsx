@@ -18,16 +18,13 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
   const { isEditing, editCabin } = useEditCabin();
   const { id: editId, ...editValues } = cabinToEdit;
   const isEditSession = Boolean(editId);
-  // console.log(isEditSession);
+
   const { register, handleSubmit, reset, getValues, formState } = useForm({
     defaultValues: isEditSession ? editValues : {},
   });
   const { errors } = formState;
-  //console.log(errors);
 
   //=======================
-  // const x = useMutation({});
-  // console.log(x);
 
   //========================
 
@@ -41,7 +38,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         { newCabinData: { ...data, image }, id: editId },
         {
           onSuccess: (data) => {
-            console.log(data);
             reset();
             onCloseModal?.();
           },
@@ -52,19 +48,14 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         { ...data, image: data.image },
         {
           onSuccess: (data) => {
-            console.log(data);
             reset();
             onCloseModal?.();
           },
         }
       );
-
-    // console.log(data);
   }
 
-  function onError(errors) {
-    //console.log(errors);
-  }
+  function onError(errors) {}
 
   return (
     //if not pass the validation, the Form will excute the secion function; in this case, - onError function

@@ -8,7 +8,7 @@ export function useCreateCabin() {
     mutationFn: createEditCabin,
 
     onSuccess: () => {
-      alert(isCreating);
+      //alert(isCreating);
       toast.success("New cabin successfully created.");
       queryClient.invalidateQueries({
         queryKeys: ["cabins"],
