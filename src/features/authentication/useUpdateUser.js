@@ -10,11 +10,11 @@ export function useUpdateUser() {
 
     onSuccess: ({ user }) => {
       toast.success("User Account successfully updated.");
-      queryClient.setQueryData("user", user); // update data manually in the cache(refresh)
+      queryClient.setQueryData(["user"], user); // update data manually in the cache(refresh)
       //alert(isEditing);
-      queryClient.invalidateQueries({
-        queryKeys: ["user"],
-      });
+      // queryClient.invalidateQueries({
+      //   queryKeys: ["user"],
+      // });
     },
     onError: (err) => toast.error(err.message),
   });
