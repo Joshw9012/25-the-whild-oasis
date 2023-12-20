@@ -15,7 +15,6 @@ import Checkbox from "../../ui/CheckBox";
 import { formatCurrency } from "../../utils/helpers";
 import { useCheckin } from "./useCheckin";
 import { useSettings } from "../settings/useSettings";
-import { useDeleteBooking } from "../bookings/useDeleteBooking";
 
 const Box = styled.div`
   /* Box */
